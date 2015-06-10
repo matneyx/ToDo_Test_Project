@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ToDo_Test_Project.Models.ToDoDB>
+@{
+    ViewBag.Title = "Index";
+}
+
+<span class="AlignRight">@Html.ActionLink("Add New List Item", "Create")</span>
+<table class="ToDoTable">
+    <col width="500" />
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th class="ToDoHead">
+                <span class="ToDoTop">@Html.DisplayFor(modelItem => item.Name)</span>
+                ( @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID }) )
+            </th>
+            <th class="ToDoHead">Due: @Html.DisplayFor(modelItem => item.DueDate)
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2" class="ToDoDetails">
+                @Html.DisplayFor(modelItem => item.Details)
+            </td>
+        </tr>
+    }
+
+</table>

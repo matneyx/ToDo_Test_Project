@@ -1,0 +1,182 @@
+﻿/*  David Matney
+    dave@davematney.com
+    801-809-7797	  */
+
+body {
+    background-color: #4D4A4A;
+    color: #C1DAD9;
+    font-family: sans-serif;
+}
+
+div.fullsite {
+    position: relative;
+    top: 25px;
+    height: 650px;
+    width: 800px;
+    margin: auto;
+    background-color: #41484F;
+    border: 1px solid #7F9691;
+}
+
+div.header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: #393939;
+    margin: 0px;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #7F9691;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #8BB9DD;
+}
+
+    a:visited {
+        color: #00AEFF;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #90E78E;
+    }
+
+#current {
+    color: #90E78E;
+}
+
+
+.title {
+    color: #A5D1A4;
+    font-size: 32px;
+}
+
+.subtitle {
+    color: #A5D1A4;
+    font-size: 15px;
+}
+
+
+
+div.nav {
+    position: relative;
+    top: -62px;
+    left: 220px;
+    height: 40px;
+    width: 558px;
+    background-color: #393939;
+    padding: 10px;
+    border: 1px solid #7F9691;
+}
+
+ul.navlist {
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+    ul.navlist li {
+        display: inline;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+article {
+    float: left;
+    left: 10px;
+    position: relative;
+    top: -35px;
+    width: 750px;
+    height: 100%;
+}
+
+    article div.image {
+        border: 1px solid #7F9691;
+        align-content: center;
+        font-size: 10px;
+        text-align: right;
+        padding: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    article div img {
+        min-width: 100%;
+        height: auto;
+    }
+
+aside {
+    float: right;
+    position: relative;
+    top: -80px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    background-color: #393939;
+    border: 1px solid #7F9691;
+    color: #A5D1A4;
+    font-family: serif;
+}
+
+#attrib {
+    text-align: right;
+    font-size: 12px;
+}
+
+#thickBreak {
+    display: block;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #7F9691;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
+}
+
+    table.ToDoTable {
+        border: 1px solid #7F9691;
+        width: 750px;
+        margin-left: 15px;
+    }
+
+.ToDoTop {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+td.ToDoDetails {
+    padding-left: 15px;
+}
+
+th.ToDoHead {
+    background-color: #393939;
+}
+
+#tableMain {
+    padding: 5px;
+    background-color: #393939;
+    border: 1px solid #7F9691;
+    color: #A5D1A4;
+}
+
+#tableSub {
+    border: 1px solid #7F9691;
+}
+
+.AlignRight {
+    float: right;
+}
+
+.editForDetails textarea {
+    height: 50px;
+    width: 700px;
+}

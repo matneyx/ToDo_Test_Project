@@ -1,0 +1,31 @@
+﻿@model ToDo_Test_Project.Models.ToDoDB
+
+@{
+    ViewBag.Title = "Delete Item";
+}
+
+
+<span class="AlignRight">@Html.ActionLink("Back to List", "Index")</span>
+<table class="ToDoTable">
+    <col width="500" />
+
+        <tr>
+            <th class="ToDoHead">
+                <span class="ToDoTop">@Html.DisplayFor(model => model.Name)</span>
+            </th>
+            <th class="ToDoHead">Due: @Html.DisplayFor(model => model.DueDate)
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2" class="ToDoDetails">
+                @Html.DisplayFor(model => model.Details)
+            </td>
+        </tr>
+
+</table>
+@using (Html.BeginForm()) {
+    <p class="AlignRight">
+        <span class="ToDoTop">Are you sure you want to delete this item?</span>
+        <input type="submit" value="Delete" />
+    </p>
+}

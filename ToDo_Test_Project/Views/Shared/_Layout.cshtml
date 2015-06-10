@@ -1,0 +1,37 @@
+﻿<!doctype html>
+
+<!--    David Matney
+        dave@davematney.com
+        801-809-7797            -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")" />
+    </head>
+    <body>
+        <div class="fullsite">
+            <header>
+                <div class="header">
+                    <span class="title">@ViewBag.Title</span>
+                </div>
+                <nav>
+                    <div class="nav">
+                    </div>
+                </nav>
+            </header>
+
+            <div class="main">
+                <main>
+                        <article>
+                            <section>
+                                 @RenderBody()
+                            </section>
+                        </article>
+                    </main>
+            </div>
+        </div>
+
+    </body>
+</html>
