@@ -1,0 +1,30 @@
+﻿@model ToDo_Test_Project.Models.ToDoDB
+
+
+@Html.ValidationSummary(true)
+   
+    <span class="align-right">@Html.ActionLink("Back to List", "Index")</span>
+    <table class="to-do-table">
+        <tr>
+            <th class="to-do-head" style="width:500px">
+                Name: 
+                @Html.TextBoxFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+
+            </th>
+            <th class="to-do-head">
+                Due: 
+                @Html.EditorFor(model => model.DueDate)
+                @Html.ValidationMessageFor(model => model.DueDate)
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2" class="to-do-details">
+                Details:<br />
+                <div class="edit-for-details">
+                    @Html.TextAreaFor(model => model.Details)
+                    @Html.ValidationMessageFor(model => model.Details)
+                </div>
+            </td>
+        </tr>
+    </table>

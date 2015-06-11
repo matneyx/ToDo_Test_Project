@@ -5,27 +5,27 @@
 }
 
 
-<span class="AlignRight">@Html.ActionLink("Back to List", "Index")</span>
-<table class="ToDoTable">
+<span class="align-right">@Html.ActionLink("Back to List", "Index")</span>
+<table class="to-do-table">
     <col width="500" />
 
         <tr>
-            <th class="ToDoHead">
-                <span class="ToDoTop">@Html.DisplayFor(model => model.Name)</span>
+            <th class="to-do-head">
+                <span class="to-do-top">@Html.DisplayFor(model => model.Name)</span>
             </th>
-            <th class="ToDoHead">Due: @Html.DisplayFor(model => model.DueDate)
+            <th class="to-do-head">Due: @Html.DisplayFor(model => model.DueDate)
             </th>
         </tr>
         <tr>
-            <td colspan="2" class="ToDoDetails">
+            <td colspan="2" class="to-do-details">
                 @Html.DisplayFor(model => model.Details)
             </td>
         </tr>
 
 </table>
 @using (Html.BeginForm()) {
-    <p class="AlignRight">
-        <span class="ToDoTop">Are you sure you want to delete this item?</span>
+    <p class="align-right">
+        <span class="to-do-top">Are you sure you want to delete this item?</span>
         <input type="submit" value="Delete" />
     </p>
 }

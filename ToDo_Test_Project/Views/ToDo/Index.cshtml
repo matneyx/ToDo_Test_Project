@@ -3,23 +3,22 @@
     ViewBag.Title = "Index";
 }
 
-<span class="AlignRight">@Html.ActionLink("Add New List Item", "Create")</span>
-<table class="ToDoTable">
-    <col width="500" />
+<span class="align-right">@Html.ActionLink("Add New List Item", "Create")</span>
+<table class="to-do-table">
 
     @foreach (var item in Model)
     {
         <tr>
-            <th class="ToDoHead">
-                <span class="ToDoTop">@Html.DisplayFor(modelItem => item.Name)</span>
+            <th class="to-do-head" style="width:500px;">
+                <span class="to-do-top">@Html.DisplayFor(modelItem => item.Name)</span>
                 ( @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.ID }) )
             </th>
-            <th class="ToDoHead">Due: @Html.DisplayFor(modelItem => item.DueDate)
+            <th class="to-do-head">Due: @Html.DisplayFor(modelItem => item.DueDate)
             </th>
         </tr>
         <tr>
-            <td colspan="2" class="ToDoDetails">
+            <td colspan="2" class="to-do-details">
                 @Html.DisplayFor(modelItem => item.Details)
             </td>
         </tr>

@@ -127,12 +127,14 @@
     <Content Include="Views\ToDo\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\ToDo\Edit.cshtml" />
+    <Content Include="Views\Shared\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ToDo\Delete.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\Shared\_ToDoEditTable.cshtml" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>

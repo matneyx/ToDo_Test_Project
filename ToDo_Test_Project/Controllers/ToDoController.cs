@@ -22,9 +22,9 @@ namespace ToDo_Test_Project.Controllers
 
         public ViewResult Index()
         {   /* This is called whenever the view returns to Index.
-             * It doesn't do anything fancy -- simply lists the DB records as they lie.  */
+             * It sorts everything by DueDate, putting the earliest DueDate first.  */
             
-            return View(db.ToDo.ToList());
+            return View(db.ToDo.ToList().OrderBy(x => x.DueDate));
         }
 
         //
@@ -34,31 +34,36 @@ namespace ToDo_Test_Project.Controllers
         // GET: /ToDo/Create
 
         public ActionResult Create()
-        {
+        { 
             return View();
         } 
+
+
 
         //
         // POST: /ToDo/Create
 
         [HttpPost]
         public ActionResult Create(ToDoDB tododb)
-        {
-            if (ModelState.IsValid)
-            {
-                db.ToDo.Add(tododb);
-                db.SaveChanges();
-                return RedirectToAction("Index");  
-            }
+        { 
+             
+              if (ModelState.IsValid)
+              {
+                  db.ToDo.Add(tododb);
+                  db.SaveChanges();
+                  return RedirectToAction("Index");
+              }
 
-            return View(tododb);
+              return View(tododb);
         }
+
         
         //
         // GET: /ToDo/Edit/5
  
         public ActionResult Edit(int id)
-        {
+        { 
+            
             ToDoDB tododb = db.ToDo.Find(id);
             return View(tododb);
         }
@@ -77,6 +82,8 @@ namespace ToDo_Test_Project.Controllers
             }
             return View(tododb);
         }
+
+
 
         //
         // GET: /ToDo/Delete/5
